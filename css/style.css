@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #dfdfdf;
+}
+
+#giant-wheel {
+  animation: wheel 12s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes wheel {
+  from {
+    transform: rotateZ(360deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+
+#wheel-cabins {
+  animation: cabins 5s linear infinite;
+  transform-origin: top;
+}
+
+@keyframes cabins {
+  0%,
+  100% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+}
+
+#left-tree,
+#right-tree {
+  animation: trees 2s linear infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@keyframes trees {
+  0%,
+  100% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+}
+
+#ballon-man {
+  animation: man 3s linear infinite;
+  transform-box: fill-box;
+}
+
+@keyframes man {
+  0%,
+  100% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+}
+
+#man2 {
+  animation: man2 3s linear infinite;
+  transform-box: fill-box;
+}
+
+@keyframes man2 {
+  0%,
+  100% {
+    transform: translateX(-20px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+}
+
+#balloon {
+  animation: balloon 2s linear infinite;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+@keyframes balloon {
+  0%,
+  100% {
+    transform: rotate(3deg);
+    transform: scale(1.1);
+  }
+  50% {
+    transform: rotate(-3deg);
+    transform: scale(1);
+  }
+}
